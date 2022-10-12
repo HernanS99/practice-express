@@ -10,5 +10,9 @@ app.post('/nuevo',(req,res)=>{
     res.json({success: true, response: 'Componente insertado correctamente'})
 })
 
+app.get('/componentes/:tarjetasgraficas',(req,res)=>{
+    res.json({success: true, response:'listado de tarjetas de video'})
+})
+
 
 app.listen(4000,()=>console.log('Todo bien'))
