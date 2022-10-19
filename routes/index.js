@@ -3,8 +3,8 @@ const { addProduct, deleteProduct } = require('../controllers/products.controlle
 const router = express.Router()
 
 router.route('/productos')
-    .post(()=> console.log(addProduct()))
-    .get(()=>console.log(deleteProduct()))
+    .post(addProduct)
+    .get(deleteProduct)
 
 
 module.exports = router
