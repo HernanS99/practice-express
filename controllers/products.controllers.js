@@ -1,8 +1,21 @@
 let productos = []
 
 const addProduct = (req,res) =>{
-    productos.push(req.body)
     try{
+
+        const  {nombre , precio ,marca , linea , memoria , tipo} = req.body
+
+        const nuevoProducto = {
+            nombre,
+            precio,
+            marca,
+            linea,
+            memoria,
+            tipo
+        }
+
+        productos.push(nuevoProducto)
+
         res.json({
             success: true,
             response: 'Producto agregado correctamente'
