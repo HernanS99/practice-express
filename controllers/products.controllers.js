@@ -17,7 +17,13 @@ const addProduct = (req,res) =>{
 }
 
 const deleteProduct = (req,res) =>{
-
+try{
+    const id = req.params.id
+    productos => productos.filter((producto)=>producto.id!==id)
+    response.json({success:true,response: productos})
+}catch(e){
+response.json({success:false})
+}
 }
 
 const editProduct = (req,res) =>{
