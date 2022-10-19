@@ -2,10 +2,18 @@ let productos = []
 
 const addProduct = (req,res) =>{
     productos.push(req.body)
-    res.json({
-        success: true,
-        response: 'Producto agregado correctamente'
-    })
+    try{
+        res.json({
+            success: true,
+            response: 'Producto agregado correctamente'
+        })
+    }catch(ee){
+        res.json({
+            success: false,
+            response: ee
+        })
+    }
+    
 }
 
 const deleteProduct = (req,res) =>{
