@@ -1,14 +1,16 @@
+let productos = []
+
 const addProduct = () =>{
     console.log('hola')
 }
 
-const deleteProduct = () =>{
-    console.log('chao')
+const deleteProduct = (req,res) =>{
+    console.log(req.body)
 }
 const editProduct = () =>{
     
 }
-const readProduct = () =>{
+const readProduct = (req,res) =>{
     
 }
 
