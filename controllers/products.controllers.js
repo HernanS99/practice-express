@@ -1,3 +1,5 @@
+const { v4: uuidv4} = require('uuid')
+
 let productos = []
 
 const addProduct = (req,res) =>{
@@ -6,6 +8,7 @@ const addProduct = (req,res) =>{
         const  {nombre , precio ,marca , linea , memoria , tipo} = req.body
 
         const nuevoProducto = {
+            id:uuidv4(), 
             nombre,
             precio,
             marca,
