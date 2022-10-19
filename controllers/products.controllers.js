@@ -4,9 +4,7 @@ let productos = []
 
 const addProduct = (req, res) => {
     try {
-
         const { nombre, precio, marca, linea, memoria, tipo } = req.body
-
         const nuevoProducto = {
             id: uuidv4(),
             nombre,
@@ -16,9 +14,7 @@ const addProduct = (req, res) => {
             memoria,
             tipo
         }
-
         productos.push(nuevoProducto)
-
         res.json({
             success: true,
             response: 'Producto agregado correctamente'
@@ -29,16 +25,15 @@ const addProduct = (req, res) => {
             response: ee
         })
     }
-
 }
 
 const deleteProduct = (req, res) => {
     try {
         const id = req.params.id
         productos => productos.filter((producto) => producto.id !== id)
-        response.json({ success: true, response: productos })
+        res.json({ success: true, response: productos })
     } catch (e) {
-        response.json({ success: false })
+        res.json({ success: false })
     }
 }
 
