@@ -7,6 +7,9 @@ router.route('/productos')
     .get(readProduct)
 
 
+router.route('/productos/:id').delete(deleteProduct)
+
+
 module.exports = router
 
 
